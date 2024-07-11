@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>saved</title>
+</head>
+<body>
+
+<?php
+if($_SERVER['REQUEST_METHOD']=='POST'){
+$formid = $_POST['identification']; 
+$formparty = $_POST['party']; 
+$formscore = $_POST['score']; 
+$formusername = $_POST['username'];
+$formdate = $_POST['date'];  
+$formip = $_POST['ip']; 
+
+$serverstatus = new mysqli('localhost','root','','new_polling_unit');
+
+if($serverstatus) {
+$recordformdata = "INSERT INTO `new_polling_unit_result` (Polling Unit Unique Id, Party, Score, Username, Date, Ip) 
+VALUES ('$formid', '$formparty', '$formscore', '$formusername', '$formdate', '$formip')";
+}
+
+//Database name and tables are for illustrative reasons.
+
+$datastored = mysqli_query($serverstatus,$recordformdata);
+if($datastored) {
+echo "Party result stored";
+}
+}
+?>
+
+</body>
+</html> 
+
+
+
+
+
+
+</body>
+</html>

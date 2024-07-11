@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>answer 2</title>
+</head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+* {
+ box-sizing: border-box;
+}
+.nav { 
+   padding: 20px;
+   background-color: black;
+   color: white;
+  }
+.task-title-container {
+               padding: 10px;
+              }
+.task-title { 
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+       }
+.nav-link { 
+     padding: 10px 0px;
+     border-top: 1px solid white;
+    }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+ }
+.links { 
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+   }
+.single-link {
+         text-align: center;
+        }
+.col-3 a {
+     width: 100%;
+     float: left;
+    }
+.container {
+      margin: auto;
+      width: 90%;
+      padding: 100px 0px;
+     }
+.lga {
+   width: 70%;
+   padding: 10px;
+   margin-top: 20px;
+  }
+.button-container {
+       margin: 10px 0px;
+      }
+.view {
+    width: 70%;
+    padding: 8px;
+    cursor: pointer;
+    background-color: rgb(77, 77, 77);
+    color: white;
+   }
+.footer {
+     margin-top: 50px;
+    }
+@media only screen and (min-width: 768px) {
+                  .col-3 a {
+                       width: 25%;
+                      }
+  .lga {
+      width: 30%;
+     }
+  .view {
+      width: 30%;
+     }
+}
+</style>
+<body>
+<div class="nav" id="nav">
+<div class="task-title-container">
+<div class="task-title">webtask</div>
+</div>
+<div class="nav-link">
+  <div class="row">
+  <div class="col-3 single-link">
+  <a href="index.html" class="links">Home</a>
+  </div>
+  <div class="col-3 single-link">
+  <a href="answer 1.html" class="links">Answer 1</a>
+  </div>
+  <div class="col-3 single-link">
+  <a href="answer 2.html" class="links">Answer 2</a>
+  </div>
+  <div class="col-3 single-link">
+  <a href="answer 3.php" class="links">Answer 3</a>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<div>Select your LGA and click the button below to view each LGA result</div>
+<div class="lga-container">
+<select id="lga" class="lga">
+    <option value="N/A" data-lga-id="1">Aniocha North</option>
+    <option value="N/A" data-lga-id="2">Aniocha South</option>
+    <option value="N/A" data-lga-id="5">Ethiope East</option>
+    <option value="24692" data-lga-id="6">Ethiope West</option>
+
+    <option value="4780" data-lga-id="7">Ika North East</option>
+    <option value="N/A" data-lga-id="8">Ika South</option>
+    <option value="N/A" data-lga-id="9">Isoko North</option>
+    <option value="N/A" data-lga-id="10">Isoko South</option>
+
+    <option value="N/A" data-lga-id="11">Ndokwa East</option>
+    <option value="N/A" data-lga-id="12">Ndokwa West</option>
+    <option value="N/A" data-lga-id="13">Okpe</option>
+    <option value="N/A" data-lga-id="14">Oshimili North</option>
+
+    <option value="N/A" data-lga-id="15">Oshimili South</option>
+    <option value="N/A" data-lga-id="16">Patani</option>
+    <option value="3369" data-lga-id="17">Sapele</option>
+    <option value="N/A" data-lga-id="18">Udu</option>
+
+    <option value="12280" data-lga-id="19">Ughelli North</option>
+    <option value="N/A" data-lga-id="20">Ughelli South</option>
+    <option value="3722" data-lga-id="21">Ukwuani</option>
+    <option value="20420" data-lga-id="22">Uvwie</option>
+
+    <option value="N/A" data-lga-id="31">Bomadi</option>
+    <option value="N/A" data-lga-id="32">Burutu</option>
+    <option value="N/A" data-lga-id="33">Warri North</option>
+    <option value="N/A" data-lga-id="34">Warri South</option>
+    <option value="N/A" data-lga-id="35">Warri South West</option>
+  </select>
+</div>
+
+<div class="button-container">
+<button type="button" class="view" onclick="view()">View</button>
+</div>
+
+<div>
+<span>LGA Result:&#160</span><span id="lga-result"></span>
+</div>
+
+<div class="footer">
+<p style="font-size:10px;">webtask &#169;. 2024.</p>
+</div>
+</div>
+
+<script>
+function view() {
+  var tr = document.getElementById("lga").value;
+  document.getElementById("lga-result").innerHTML = tr;
+}
+</script>
+</body>
+</html>

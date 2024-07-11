@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>answer 3</title>
+</head>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+* {
+ box-sizing: border-box;
+}
+.nav { 
+   padding: 20px;
+   background-color: black;
+   color: white;
+  }
+.task-title-container {
+               padding: 10px;
+              }
+.task-title { 
+          font-weight: bold;
+          padding: 10px;
+          text-align: center;
+         }
+.nav-link { 
+     padding: 10px 0px;
+     border-top: 1px solid white;
+    }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+ }
+.links { 
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+   }
+.single-link {   
+     text-align: center;
+    }
+.col-3 a {
+     width: 100%;
+     float: left;
+     }
+.container {
+       margin: auto;
+       width: 90%;
+       padding: 100px 0px;
+      }
+.footer {
+     margin-top: 50px;
+     width: 70%;
+     text-align: center;
+    }
+.sections { 
+       display: block;
+       padding: 20px 0px;
+      }
+input[type=radio] {
+            padding: 10px 0px;
+           }
+input[type=text],
+input[type=date] {
+            padding: 10px;
+            width: 70%;
+           }
+.save {
+   padding: 8px;
+   width: 70%;
+   cursor: pointer;
+   background-color: rgb(77, 77, 77);
+   color: white;
+  }
+@media only screen and (min-width: 768px) {
+             .col-3 a {
+                    width: 25%;
+                   }
+input[type=text],
+input[type=date] {
+               width: 30%;
+              }
+.save {
+    width: 30%;
+   }
+.footer {
+    width: 30%;
+   }
+}
+</style>
+<body>
+<div class="nav" id="nav">
+<div class="task-title-container">
+<div class="task-title">webtask</div>
+</div>
+<div class="nav-link">
+  <div class="row">
+  <div class="col-3 single-link">
+  <a href="index.html" class="links">Home</a>
+  </div>
+  <div class="col-3 single-link">
+  <a href="answer 1.html" class="links">Answer 1</a>
+  </div>
+  <div class="col-3 single-link">
+  <a href="answer 2.html" class="links">Answer 2</a>
+  </div>
+  <div class="col-3 single-link">
+  <a href="answer 3.php" class="links">Answer 3</a>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<div><h1>Party Scores</h1></div>
+<div><h3>Individuals with authorized access should fill out  the required sections and save.</h3></div>
+<div><p><b>Relevant:&#160;</b> A polling unit was created in Ethiope West in Ward 11 (Oghara V).</p></div>
+
+
+<form name="" method="POST" action="fh.php">
+<div class="sections">
+<label for="identification">Polling unit unique id</label><br>
+<input type="text" name="identification" id="identification" value="2719" readonly>
+</div>
+<div class="sections">
+<label for="party">Party</label><br>
+<input type="radio" name="party" id="pdp">PDP<br>
+<input type="radio" name="party" id="dpp">DPP<br>
+<input type="radio" name="party" id="acn">ACN<br>
+<input type="radio" name="party" id="ppa">PPA<br>
+<input type="radio" name="party" id="cdc">CDC<br>
+<input type="radio" name="party" id="jp">JP<br>
+<input type="radio" name="party" id="anpp">ANPP
+</div>
+<div class="sections">
+<label for="score">Score</label><br>
+<input type="text" name="score" id="score">
+</div>
+<div class="sections">
+<label for="username">Username</label><br>
+<input type="text" name="username" id="username">
+</div>
+<div class="sections">
+<label for="date">Date</label><br>
+<input type="date" name="date" id="date">
+</div>
+<div class="sections">
+<label for="ip">IP Address</label><br>
+<input type="text" name="ip" id="ip">
+</div>
+
+<div class="sections">
+<input type="submit" name="save" id="save" class="save" value="Save">
+</div>
+</form>
+
+<div class="footer">
+<p style="font-size:10px;">webtask &#169;. 2024.</p>
+</div>
+</div>
+</body>
+</html>
